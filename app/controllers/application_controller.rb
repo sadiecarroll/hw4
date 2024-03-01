@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
-  before_action :current_user
+  before_action :user
 
-  def current_user
+  def user
     puts "------------------ code before every request ------------------"
-    @current_user = User.find_by({ "id" => session["user_id"] })
+    @user = User.find_by({ "id" => session["user_id"] })
   end
 end
