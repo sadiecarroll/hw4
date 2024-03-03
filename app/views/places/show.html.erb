@@ -1,11 +1,23 @@
 <h1><%= @place["name"] %></h1>
 
 <h2>My Entries</h2>
+<%  %>
+<ul>
+
+<div class="container text-center">
+  <div class="row">
+  
 <% for entry in @entries %>
-  <h3><%= entry["title"] %></h3>
-  <h4><%= entry["occurred_on"] %></h4>
-  <p><%= entry["description"] %></p>
-<% end %>
+
+  <div class="col-md-4">
+    
+     <h3> <%= entry["title"] %> </h3>
+     <h6> <%= entry["occurred_on"] %> </h6>
+      <%= entry["description"] %>
+        </div>
+
+  <% end %>
+</ul>
 
 <p>
   <a href="/entries/new?place_id=<%= @place["id"] %>">New Entry</a>
