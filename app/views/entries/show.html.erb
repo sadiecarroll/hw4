@@ -8,4 +8,10 @@
   <li><%= @entry["posted_on"] %></li>
 </ul>
 
+<% if entry.uploaded_image.attached? %>
+  <img src="<%= url_for(entry.uploaded_image) %>" class="img-fluid">
+<% else %>
+  <img src="<%= entry["image"] %>" class="img-fluid">
+<% end %>
+
 <p><a href="/places/<%= @place["id"] %>">Back to<%= @place["name"] %></a></p>
