@@ -14,6 +14,11 @@
      <h6> <%= entry["occurred_on"] %> </h6>
       <%= entry["description"] %>
         </div>
+<% if entry.uploaded_image.attached? %>
+  <img src="<%= url_for(entry.uploaded_image) %>" class="img-fluid">
+<% else %>
+  <img src="<%= entry["image"] %>" class="img-fluid">
+<% end %>
 
   <% end %>
 </ul>
