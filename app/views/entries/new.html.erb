@@ -20,8 +20,9 @@
   </p>
 
   <div class="mb-3">
-  <%= form.label "uploaded_image", :class => "form-label" %>
-  <%= form.file_field "uploaded_image", :class => "form-control" %>
+
+    <label for="uploaded_image" class = "form-label" >Upload Image</label>
+    <input type="file" name="uploaded_image" id="uploaded_image_input" class = "form-label">
 </div>
 
   <button>Save</button>
